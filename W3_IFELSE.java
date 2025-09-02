@@ -15,4 +15,5 @@ public class W3_IFELSE {
         charge = 10; }
         System.out.println("The total charge is $" + charge);
 
-    }    }
+    }
+}
