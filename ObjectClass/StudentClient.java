@@ -2,9 +2,12 @@ package ObjectClass;
 public class StudentClient {
     public static void main(String[] args) {
         Student s1=new Student(); // object declaration
+        Student s2=new Student("Laphii",80);
         s1.name="Peter";
         s1.total=65;
         System.out.println(s1.name+" "+s1.total+" "+s1.grade());
+        System.out.println(s2);
+
     }
 }
 
