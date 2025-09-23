@@ -1,5 +1,5 @@
 package ObjectClass;
-//blueprint 
+//blueprint
 public class Student {
 String name;
 private int total=100;
@@ -17,6 +17,7 @@ public Student(String name,int total){ // parameterized constructor
     this.total=total;
 }
 
+@Override
 public String toString(){ // override the toString() method of Object class
     return name +" "+ total + " "+ grade();
 }
@@ -26,31 +27,15 @@ char grade(){
     else if(total>=50) return 'B';
     return 'F';
     }
-public Student(){
-    name = "N/A";
-    total = 0;
-}
-public Student(String name,int total){
-    this.name = name;
-    this.total = total;
-}  
-    
+
     public void setTotal(int total) {
         if(total>=0 && total<=100)
         this.total = total;
     }
-<<<<<<< Updated upstream
     public int getTotal(){
         return total;
     }
-public String toString(){
-    return name + " " + total + " " + grade();
-}
-=======
-    public int getTotal() {
-        return total;
-    }
->>>>>>> Stashed changes
+
 }
 
 //package statement is always the first statement in a java file because it defines the folder structure

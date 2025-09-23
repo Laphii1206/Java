@@ -2,10 +2,11 @@ import java.util.Scanner;
 public class AUG2022_Q2 {
 
     public static void main(String[] args) {
+      
        char letter;
        int number;
        String color ="";
-       Scanner scanner = new Scanner(System.in);
+       try (Scanner scanner = new Scanner(System.in)) {
          System.out.print("Enter a letter ('A' to 'D'): ");
             letter = scanner.next().charAt(0);
          System.out.print("Enter a number(1 to 5): ");
@@ -21,6 +22,7 @@ public class AUG2022_Q2 {
 
                    System.out.println("The background color is " + color);
                  }
+        }
             
 
         }
