@@ -4,11 +4,16 @@ public class StudentClient {
         Student s1=new Student(); // object declaration
         Student s2=new Student("Laphii",80);
         s1.name="Peter";
+<<<<<<< Updated upstream
      //   s1.total=65;
         s1.setTotal(65);
         System.out.println(s1.name+" "+s1.getTotal()+" "+s1.grade());
         System.out.println(s2);
 
+=======
+        s1.setTotal(65);
+        System.out.println(s1);
+>>>>>>> Stashed changes
     }
 }
 
