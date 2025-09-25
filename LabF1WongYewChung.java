@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class LabF1WongYewChung {
         static Scanner scanner = new Scanner(System.in);
-        static double balance=0,total=0,amountInserted=0;
+        static double balance=0,total=0,amount=0;
         static String item;
         static String receipt="";
 
@@ -53,36 +53,39 @@ public static void purchaseItem(){
         
         }else if (price == -1){
             //do nothing 
-        } else if (balance > price){
+        } else if (balance > price && price !=0){
             total += price;
             balance -= price;
             receipt += item + "\t\t" + price + "\n";
-            System.out.println("\nYou have purchased " + item + " for RM " + price);
+            System.out.println("You have purchased " + item + " for RM " + price);
         }
     } while(balance >= 0.79 && selection != 0);
 }
 
 public static void printReceipt(){
-System.out.println("Receipt");
+    if(total ==0){
+        System.out.println("No items purchased");
+    } else {
+System.out.println("\nReceipt");
         System.out.println("-------------------------");
         System.out.println(receipt);
         System.out.println("-------------------------");
         System.out.println("Total: RM" + total);
         System.out.println("==========================");
-        System.out.println("Amount inserted: RM" + amountInserted);
-        System.out.printf("Balance: RM%.2f\n", balance); 
+        System.out.println("Amount inserted: RM" + amount);
+        System.out.printf("Balance: RM%.2f\n", balance);}
 }
 
     public static void main(String[] args) {
         printItem();
         System.out.print("Please Insert Your Balance: RM");
-        amountInserted=scanner.nextDouble();
-        while(amountInserted<=0.8){
+        amount=scanner.nextDouble();
+        while(amount<=0.8){
         System.out.println("Invalid Balance or less than 0.80 for minimum purchase Please Try Again");
         System.out.print("Please Insert Your Balance: RM");
-        amountInserted=scanner.nextDouble();
+        amount=scanner.nextDouble();
         }
-        balance = amountInserted;
+        balance = amount;
         purchaseItem();
         printReceipt();
     }
