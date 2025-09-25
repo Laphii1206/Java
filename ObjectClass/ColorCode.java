@@ -24,9 +24,7 @@ public class ColorCode {
   
 
     public boolean validIndex(int index){
-        if(index>=0 && index<=255)
-        return true;
-        return false;
+        return (index>=0 && index<=255)
     }
       public void setColor(int r, int g, int b){
         if(validIndex(r) && validIndex(g) && validIndex(b)){

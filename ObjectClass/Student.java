@@ -1,9 +1,12 @@
 package ObjectClass;
 //blueprint
 public class Student {
-String name;
+String name,id;
 private int total=100;
-
+{
+//generate id
+//add record to database
+}
 public Student(){ // default constructor
     name="unknown";
     total=0;
@@ -13,6 +16,11 @@ public Student(String name){ // parameterized constructor
 }
 
 public Student(String name,int total){ // parameterized constructor
+    this.name=name;
+    this.total=total;
+}
+
+public void setStudent(String name,int total){
     this.name=name;
     this.total=total;
 }
