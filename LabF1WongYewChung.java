@@ -77,6 +77,7 @@ System.out.println("\nReceipt");
 }
 
     public static void main(String[] args) {
+        
         printItem();
         System.out.print("Please Insert Your Balance: RM");
         amount=scanner.nextDouble();

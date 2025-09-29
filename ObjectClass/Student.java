@@ -1,9 +1,11 @@
 package ObjectClass;
 //blueprint
 public class Student {
+    static int count=0;
 String name,id;
 private int total=100;
 {
+    count++;
 //generate id
 //add record to database
 }
