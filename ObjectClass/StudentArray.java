@@ -8,6 +8,7 @@ public class StudentArray {
     addStudent(students);
     System.err.println(Arrays.toString(students));
 }
+
 public static void addStudent(Student[] s){
     System.out.print("Enter Student Name: ");
     String name = scanner.nextLine();
