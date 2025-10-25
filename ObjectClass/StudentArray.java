@@ -17,7 +17,4 @@ public static void addStudent(Student[] s){
     scanner.nextLine(); // consume the newline character
     s[Student.count] = new Student(name,total);
         }
-    }
- 
-
- 
+    } 
